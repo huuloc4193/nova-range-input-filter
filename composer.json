@@ -1,5 +1,6 @@
 {
-    "name": "digital-creative/nova-range-input-filter",
+    "name": "huuloc4193/nova-range-input-filter",
+    "version": "1.1.1"
     "description": "A Laravel Nova range input filter.",
     "keywords": [
         "laravel",
