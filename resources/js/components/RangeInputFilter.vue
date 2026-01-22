@@ -8,25 +8,25 @@
 
             <div class="flex flex-no-wrap items-center">
 
-                <input class="w-full block form-control form-select form-control-sm form-select-bordered px-3"
-                       name="from"
-                       :type="filter.inputType || 'number'"
-                       :placeholder="filter.fromPlaceholder"
-                       v-model="value.from"
-                       v-bind="filter.fromAttributes"
-                       @change="handleChange"/>
+                <input class="block w-full min-w-0 form-control form-input form-control-bordered"
+                    name="from"
+                    :type="filter.inputType || 'number'"
+                    :placeholder="filter.fromPlaceholder"
+                    v-model="value.from"
+                    v-bind="filter.fromAttributes"
+                    @change="handleChange"/>
 
                 <div class="text-sm mx-2 text-center">
                     {{ filter.dividerLabel || __('to') }}
                 </div>
 
-                <input class="w-full block form-control form-select form-control-sm form-select-bordered px-3"
-                       name="to"
-                       :type="filter.inputType || 'number'"
-                       :placeholder="filter.toPlaceholder"
-                       v-model="value.to"
-                       v-bind="filter.toAttributes"
-                       @change="handleChange"/>
+                <input class="block w-full min-w-0 form-control form-input form-control-bordered"
+                    name="to"
+                    :type="filter.inputType || 'number'"
+                    :placeholder="filter.toPlaceholder"
+                    v-model="value.to"
+                    v-bind="filter.toAttributes"
+                    @change="handleChange"/>
 
             </div>
 
