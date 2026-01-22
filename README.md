@@ -16,7 +16,7 @@ A Laravel Nova range input filter.
 You can install the package via composer:
 
 ```
-composer require digital-creative/nova-range-input-filter
+composer require huuloc4193/nova-range-input-filter
 ```
 
 ## Basic Usage
@@ -32,6 +32,15 @@ class MyFilter extends RangeInputFilter {
     {
         $from = data_get($value, 'from');
         $to = data_get($value, 'to');
+
+        return $query->where(function ($q) use ($from, $to) {
+                    if ($from) {
+                        $q->where('id', '>=', $from);
+                    }
+                    if ($to) {
+                        $q->where('id', '<=', $to);
+                    }
+                });
     }
 
 }
